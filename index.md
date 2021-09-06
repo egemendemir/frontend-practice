@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Summary</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrapper">
+    <div class="hero">
+      <img src="images/illustration-hero.svg" alt="">
+    </div>
+    <div class="order-summary">
+      <h1>Order Summary</h1>
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="plan">
+        <img src="images/icon-music.svg" alt="">
+        <p>
+          Annual Plan <br> 
+          $59.99/year
+        </p>
+        <a href="#">Change</a>
+      </div>
+      <a href="#" class="proceed-btn">Proceed to Payment</a>
+      <a href="#" class="cancel">Cancel Order</a>
+    </div>
+  </main>
+</body>
+</html>
