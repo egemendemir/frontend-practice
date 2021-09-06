@@ -1,1 +1,169 @@
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(225, 100%, 94%);
+  font-size: 16px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+p, a, h1 {
+  font-family: 'Red Hat Display', sans-serif;
+  color: hsl(224, 23%, 55%);
+  line-height: 1.5;
+}
+
+a:link {
+  color:hsl(223, 47%, 23%);
+}
+
+a:visited {
+  color:hsl(223, 47%, 23%);
+}
+
+a:focus {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+a:active {
+  color: #766cf1;
+  text-decoration: none;
+}
+.wrapper {
+  max-width: 330px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 25px 30px -35px #151515;
+}
+
+.hero > img {
+  max-width: 100%;
+  /* display: block removes the gap needed for descenders */
+  display: block;
+}
+
+.order-summary {
+  background-color: white;
+  overflow: hidden;
+  padding: 10px 27px;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.order-summary > h1 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+  margin: 20px 0px;
+}
+
+.plan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color:hsl(225, 100%, 98%);
+  margin-top: 25px;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.plan > p::first-line {
+  font-weight: 700;
+  color:hsl(223, 47%, 23%);
+}
+
+.plan p {
+  flex: 3;
+  font-size: 14px;
+  text-align: left;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+
+.plan a {
+  font-size: 14px;
+  color:hsl(245, 75%, 52%);
+  font-weight: 700;
+}
+
+.plan a:hover {
+  color: #766cf1;
+}
+
+.order-summary .proceed-btn {
+  display: block;
+  max-width: 100%;
+  padding: 15px 0px;
+  margin: 25px 0px;
+  border-radius: 10px;
+  background-color:hsl(245, 75%, 52%);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0px 10px 20px -9px #3023cc;
+}
+
+.order-summary .proceed-btn:hover {
+  background-color: #766cf1;
+}
+
+.order-summary .cancel {
+  color: hsl(224, 23%, 55%);
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.order-summary .cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media screen and (max-width: 319px) {
+  .plan {
+    display: block;
+    padding: 20px;
+  }
+  .plan > p {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+  }
+
+  .wrapper {
+  max-width: 450px;
+  }
+
+  .plan {
+    padding: 8px 25px;
+  }
+
+  .plan p {
+    font-size: 17px;
+  }
+  .order-summary {
+    padding: 30px 50px 50px 50px;
+  }
+
+  .order-summary h1 {
+    font-size: 1.7rem;
+  }
+}
