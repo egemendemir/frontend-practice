@@ -15,7 +15,7 @@ body {
 p, a, h1 {
   font-family: 'Red Hat Display', sans-serif;
   color: hsl(224, 23%, 55%);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 a:link {
@@ -57,16 +57,16 @@ a:active {
 .order-summary {
   background-color: white;
   overflow: hidden;
-  padding: 10px 25px;
+  padding: 10px 27px;
   text-align: center;
   padding-bottom: 35px;
 }
 
 .order-summary > h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 900;
   color: hsl(223, 47%, 23%);
-  margin: 25px 0px;
+  margin: 20px 0px;
 }
 
 .plan {
@@ -75,7 +75,8 @@ a:active {
   justify-content: space-between;
   align-items: center;
   background-color:hsl(225, 100%, 98%);
-  padding: 0px 15px;
+  margin-top: 25px;
+  padding: 5px 15px;
   border-radius: 15px;
 }
 
@@ -86,13 +87,20 @@ a:active {
 
 .plan p {
   flex: 3;
+  font-size: 14px;
   text-align: left;
   padding: 0 20px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .plan a {
   font-size: 14px;
+  color:hsl(245, 75%, 52%);
+  font-weight: 700;
+}
+
+.plan a:hover {
+  color: #766cf1;
 }
 
 .order-summary .proceed-btn {
@@ -100,7 +108,7 @@ a:active {
   max-width: 100%;
   padding: 15px 0px;
   margin: 25px 0px;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color:hsl(245, 75%, 52%);
   color: white;
   font-weight: 700;
@@ -123,7 +131,7 @@ a:active {
   color: hsl(223, 47%, 23%);
 }
 
-@media screen and (max-width: 319px){
+@media screen and (max-width: 319px) {
   .plan {
     display: block;
     padding: 20px;
@@ -133,3 +141,28 @@ a:active {
   }
 }
 
+@media screen and (min-width: 600px) {
+  body {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+  }
+
+  .wrapper {
+  max-width: 450px;
+  }
+
+  .plan {
+    padding: 8px 25px;
+  }
+
+  .plan p {
+    font-size: 17px;
+  }
+  .order-summary {
+    padding: 30px 50px 50px 50px;
+  }
+
+  .order-summary h1 {
+    font-size: 1.7rem;
+  }
+}
