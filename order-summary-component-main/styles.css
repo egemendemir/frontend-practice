@@ -1,93 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background-color: hsl(225, 100%, 94%);
   font-size: 16px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-p, a {
+p, a, h1 {
   font-family: 'Red Hat Display', sans-serif;
+  color: hsl(224, 23%, 55%);
+  line-height: 1.4;
 }
 
 a:link {
-  color: hsl(223, 47%, 23%);
-  
+  color:hsl(223, 47%, 23%);
 }
-.card p {
-  text-align: center;
-  color: hsl(224, 23%, 55%);
+
+a:visited {
+  color:hsl(223, 47%, 23%);
 }
-.card > p:first-of-type {
-  font-weight: 900;
-  color: hsl(223, 47%, 23%);
-  text-align: center;
-  font-size: 1.5rem;
+
+a:focus {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+a:active {
+  color: #766cf1;
+  text-decoration: none;
 }
 .wrapper {
-  /*
-  background-image: url(images/pattern-background-mobile.svg);
-  background-repeat: repeat-x;
-  background-size: contain;
-  */
-  background-color: hsl(225, 100%, 94%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.card {
-  width: 40%;
+  max-width: 330px;
   margin: auto;
   border-radius: 20px;
-  background-color: white;
-  border: 1px solid hsl(225, 100%, 94%);
   overflow: hidden;
-  flex: 320px 0 0;
+  box-shadow: 0px 25px 30px -35px #151515;
 }
 
-.card img {
+.hero > img {
   max-width: 100%;
-  
+  /* display: block removes the gap needed for descenders */
+  display: block;
 }
 
-.container {
-  margin: 0px 30px;
+.order-summary {
+  background-color: white;
+  overflow: hidden;
+  padding: 10px 25px;
+  text-align: center;
+  padding-bottom: 35px;
 }
-.payment-info {
-  background-color: hsl(225, 100%, 98%);
-  display: grid;
-  /*! margin: 0px 20px; */
-  padding: 0px 20px;
-  border: 1px solid hsl(225, 100%, 98%);
-  border-radius: 10px;
-  grid-template-columns: auto 2fr auto ;
-  align-items: center;
-  gap: 5px;
-} 
 
-.payment-info p::first-line {
+.order-summary > h1 {
+  font-size: 1.5rem;
   font-weight: 900;
   color: hsl(223, 47%, 23%);
-  font-weight: 700;
+  margin: 25px 0px;
 }
 
-.container > a {
-  text-align: center;
-  display: block;
-  padding: 15px 30px;
-  
-  
-}
-
-.container > a:first-of-type {
-  margin-top: 30px;
-  background-color: hsl(245, 75%, 52%);
-  color: white;
-  text-decoration: none;
+.plan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color:hsl(225, 100%, 98%);
+  padding: 0px 15px;
   border-radius: 15px;
 }
 
-.container > a:first-of-type:hover {
-  background-color: hsl(225, 100%, 60%);
+.plan > p::first-line {
+  font-weight: 700;
+  color:hsl(223, 47%, 23%);
 }
-  
+
+.plan p {
+  flex: 3;
+  text-align: left;
+  padding: 0 20px;
+  line-height: 1.4;
+}
+
+.plan a {
+  font-size: 14px;
+}
+
+.order-summary .proceed-btn {
+  display: block;
+  max-width: 100%;
+  padding: 15px 0px;
+  margin: 25px 0px;
+  border-radius: 15px;
+  background-color:hsl(245, 75%, 52%);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0px 10px 20px -9px #3023cc;
+}
+
+.order-summary .proceed-btn:hover {
+  background-color: #766cf1;
+}
+
+.order-summary .cancel {
+  color: hsl(224, 23%, 55%);
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.order-summary .cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media screen and (max-width: 319px){
+  .plan {
+    display: block;
+    padding: 20px;
+  }
+  .plan > p {
+    text-align: center;
+  }
+}
+
