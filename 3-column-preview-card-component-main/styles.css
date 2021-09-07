@@ -8,6 +8,7 @@ body {
   font-size: 15px;
   color: hsla(0, 0%, 100%, 0.75);
   background-color: hsl(0, 0%, 95%);
+  height: 100vh;
 }
 
 h1 {
@@ -19,7 +20,7 @@ h1 {
 }
 
 p {
-  margin: 20px 0px;
+  margin: 20px 0px 0px 0px;
   line-height: 1.7;
   color: hsla(0, 0%, 100%, 0.75);
   padding-bottom: 25px;
@@ -29,8 +30,9 @@ a {
   border: 2px solid hsl(0, 0%, 95%);
   border-radius: 50px;
   background-color: hsl(0, 0%, 95%);
+  display: inline-block;
   padding: 13px 30px;
-  text-decoration: none;;
+  text-decoration: none;
 }
 p, a {
   font-family: 'Lexend Deca', sans-serif;
@@ -49,12 +51,21 @@ p, a {
   color:hsl(179, 100%, 13%);
 }
 
-a:visited {
-
+.sedans a:visited {
+  color: hsl(31, 77%, 52%);;
 }
 
-a:focus {
+.suvs a:visited {
+  color:hsl(184, 100%, 22%);
+}
 
+.luxury a:visited {
+  color:hsl(179, 100%, 13%);
+}
+
+.wrapper a:focus {
+  background-color: inherit;
+  color: hsl(0, 0%, 95%);
 }
 
 /* Added wrapper for specifity */
@@ -63,17 +74,13 @@ a:focus {
   color: hsl(0, 0%, 95%);
 }
 
-a:hover {
-
-}
-
-a:active {
-
+.wrapper a:active {
+  color: hsl(0, 0%, 95%);
 }
 
 .wrapper {
   border-radius: 10px;
-  margin: 87px 24px;
+  margin: 80px 24px;
   overflow: hidden;
 }
 
@@ -90,4 +97,26 @@ a:active {
 .wrapper .luxury {
   background-color: hsl(179, 100%, 13%);
   padding: 50px;
+}
+
+@media screen and (min-width: 968px) {
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper {
+    max-width: 920px;
+    display: flex;
+  }
+
+  .text-container {
+    padding-bottom: 5.6vw;
+  }
+
+  p {
+    display: inline-block;
+  }
 }
