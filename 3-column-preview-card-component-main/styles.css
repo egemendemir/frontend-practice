@@ -75,12 +75,13 @@ p, a {
 }
 
 .wrapper a:active {
+  background-color:hsl(0, 0%, 95%);
   color: hsl(0, 0%, 95%);
 }
 
 .wrapper {
   border-radius: 10px;
-  margin: 80px 24px;
+  margin: 87px 24px;
   overflow: hidden;
 }
 
@@ -109,14 +110,24 @@ p, a {
 
   .wrapper {
     max-width: 920px;
+    margin: 0;
     display: flex;
   }
 
   .text-container {
-    padding-bottom: 5.6vw;
+    padding-bottom: 80px;
   }
 
   p {
     display: inline-block;
+    padding-bottom: 0;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
