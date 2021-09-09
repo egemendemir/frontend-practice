@@ -22,7 +22,6 @@ body {
   font-size: 1.5rem;
   font-family: Poppins, sans-serif;
   margin: 0;
-  /*padding: 30px 10px;*/
   background-color: var(--lightgray);
 }
 
@@ -120,7 +119,7 @@ h1 span {
 @media screen and (min-width: 800px) {
 
   body {
-    max-width: 1150px;
+    max-width: 115rem;
     margin: auto;
   }
 
