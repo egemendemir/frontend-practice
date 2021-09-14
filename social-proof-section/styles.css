@@ -16,6 +16,7 @@
 
 html {
   font-size: 62.5%;
+  height: 100vh;
 }
 
 body {
@@ -23,6 +24,9 @@ body {
   padding: 0;
   font-family: 'Spartan', sans-serif;
   font-size: 1.4rem;
+  background-image: url(images/bg-pattern-top-mobile.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
 }
 
 h1,
@@ -49,11 +53,12 @@ ul {
   list-style-type: none;
 }
 
+body {
+  height: 100vh;
+}
+
 .wrapper {
   padding: 8rem 2.5rem 7rem 2.5rem;
-  background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
-  background-position: top left, bottom left;
-  background-repeat: no-repeat;
 }
 
 .top-part {
@@ -89,6 +94,10 @@ ul {
   display: flex;
   gap: 0.8rem;
   justify-content: center;
+}
+
+.rating-stars img {
+  display: block;
 }
 
 .review-card {
@@ -132,19 +141,117 @@ p.verified {
   max-width: 100%;
 }
 
-@media screen and(min-width: 600px){
+@media screen and (min-width: 800px){
+
+  body {
+    background-image: url(images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+  }
+  .wrapper {
+    padding: 7% 11.5%;
+  }
+
+  .introduction-text h1 {
+    font-size: 5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .top-review {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow:0;
+    min-width: 50rem;
+  }
+
+  .rating-panel h2 {
+    margin: 0;
+  }
+
+  .rating-panel {
+    padding: 1.7rem 3rem;
+    flex-basis: 1px;
+    display: flex;
+    gap: 1.8rem;
+    width: 85%;
+  }
+
+  .rating-panel:nth-child(1) {
+    align-self: flex-start;
+  }
+
+  .rating-panel:nth-child(2) {
+    align-self: center;
+  }
+
+  .rating-panel:nth-child(3) {
+    align-self: flex-end;
+  }
+
+  .rating-stars {
+    align-items: center;
+  }
+
+  .customer-review-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .review-card {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+
+  body {
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+  }
+
+  .wrapper{
+    max-width: 160rem;
+    margin: auto;
+    padding: 11.2rem 18.4rem;
+  }
   .top-part {
     display: flex;
+    gap: 5rem;
+    margin-bottom: 4rem;
   }
-  
+
   .introduction-text {
-    flex: 3;
+    padding-right: 5%;
+    text-align: left;
   }
-  
+
   .top-review {
-    flex: 4;
+    padding-top: 2rem;
   }
-  .rating-panel {
-    display: flex;
+
+  .customer-review-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    grid-auto-rows: 1fr;
+    min-height: 300px;
+  }
+
+  .review-card {
+    margin: 0;
+  }
+
+  .review-card:nth-child(1) {
+    align-self: flex-start;
+  }
+
+  .review-card:nth-child(2) {
+    align-self: center;
+  }
+
+  .review-card:nth-child(3) {
+    align-self: flex-end;
   }
 }
